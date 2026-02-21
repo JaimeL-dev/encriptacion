@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrador Cesar y Atbash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cifrador de Texto</h1>
+        
+        <div class="input-group">
+            <label for="alphabet">Alfabeto base:</label>
+            <input type="text" id="alphabet" value="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ">
+
+        </div>
+
+        <div class="config-row">
+            <div class="input-group">
+                <label for="method">Método de Cifrado:</label>
+                <select id="method">
+                    <option value="cesar">Cifrado César</option>
+                    <option value="atbash">Cifrado Atbash</option>
+                </select>
+            </div>
+            
+            <div class="input-group" id="shift-container">
+                <label for="shift">Desplazamiento :</label>
+                <input type="number" id="shift" value="3" min="1">
+            </div>
+        </div>
+
+        <div class="text-areas">
+            <div class="input-group">
+                <label for="inputText">Texto Original:</label>
+                <textarea id="inputText" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+
+            <div class="actions">
+                <button id="encryptBtn">Cifrar </button>
+                <button id="decryptBtn">Descifrar </button>
+            </div>
+
+            <div class="input-group">
+                <label for="outputText">Resultado:</label>
+                <textarea id="outputText" readonly placeholder=""></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
